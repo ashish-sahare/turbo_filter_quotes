@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+20.times do
+  Quote.create(
+    quote: Faker::TvShows::DumbAndDumber.quote,
+    character: Faker::TvShows::DumbAndDumber.character,
+    action: Faker::TvShows::DumbAndDumber.actor
+  )
+end

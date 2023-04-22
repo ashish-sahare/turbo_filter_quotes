@@ -1,0 +1,20 @@
+<div>
+  <p>
+    <strong>Quote:</strong>
+    <%= quote.quote %>
+  </p>
+
+  <p>
+    <strong class="<%= "text-blue-500" if params[:column] == "character" %>">Character:</strong>
+    <%= quote.character %>
+  </p>
+
+  <p>
+    <strong class="<%= "text-teal-500" if params[:column] == "action" %>">action:</strong>
+    <%= quote.action %>
+  </p>
+
+  <%= turbo_frame_tag dom_id(quote) do %>
+    <%= link_to "Edit quote", edit_quote_path(quote), class: "underline" %>
+  <% end %>
+</div>
